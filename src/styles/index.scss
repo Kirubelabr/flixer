@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '~antd/dist/antd.css';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba($color: #000000, $alpha: 1.0);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+button[ant-click-animating-without-extra-node]:after {
+  border: 0 none;
+  opacity: 0;
+  animation:none 0 ease 0 1 normal;
+}
+
+.ant-btn:focus {
+  animation: none !important;
+}
+[ant-click-animating-without-extra-node]:after,
+.ant-click-animating-node {
+  display: none;
+  border: none;
+  opacity: 0.2;
+  -webkit-animation: none !important;
+          animation: none !important;
+  -webkit-animation-fill-mode: none !important;
+          animation-fill-mode: none !important;
+  pointer-events: none;
+}
+.ant-btn-clicked:after {
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+}
